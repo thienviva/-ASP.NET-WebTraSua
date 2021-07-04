@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebQuanLyQuanTraSua.Models.TAIKHOANQL>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/AdminLayout.cshtml";
+}
+
+<h2>Thiết Lập Tài Khoản Cho Quản Lý</h2>
+
+<p>
+    <div class="btn btn-default">
+        @Html.ActionLink("Thêm mới", "Create")
+    </div>
+    <div class="btn btn-default">
+        @Html.ActionLink("Danh sách quản lý", "Index", "QUANLies")
+    </div>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Tài khoản:
+        </th>
+        <th>
+            Mật khẩu:
+        </th>
+        <th>
+            Tên quản lý:
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QUANLY.TenQL)
+        </td>
+        <td>
+            @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.MaQL }) |
+            @Html.ActionLink("Chi tiết", "Details", new { id = item.MaQL }) |
+            @Html.ActionLink("Xóa", "Delete", new { id = item.MaQL })
+        </td>
+    </tr>
+}
+
+</table>

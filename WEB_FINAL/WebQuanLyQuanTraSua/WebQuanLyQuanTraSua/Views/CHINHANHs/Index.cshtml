@@ -1,0 +1,54 @@
+﻿@model IEnumerable<WebQuanLyQuanTraSua.Models.CHINHANH>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/AdminLayout.cshtml";
+}
+
+<h2>Các Chi Nhánh Của Của Hàng</h2>
+
+<p>
+    <div class="btn btn-default">
+        @Html.ActionLink("Thêm mới", "Create")
+    </div>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Tên Chi Nhánh
+        </th>
+        <th>
+            Địa Chỉ Chi Nhánh
+        </th>
+        <th>
+            Số Điện Thoại
+        </th>
+        <th>
+            Tên Người Quản Lý
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenCN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiaChi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QUANLY.TenQL)
+        </td>
+        <td>
+            @Html.ActionLink("Chỉnh sửa", "Edit", new { id=item.MaCN }) |
+            @Html.ActionLink("Chi tiết", "Details", new { id=item.MaCN }) |
+            @Html.ActionLink("Xóa", "Delete", new { id=item.MaCN })
+        </td>
+    </tr>
+}
+
+</table>

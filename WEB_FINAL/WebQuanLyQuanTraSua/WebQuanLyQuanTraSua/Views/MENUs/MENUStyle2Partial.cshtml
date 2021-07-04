@@ -1,0 +1,27 @@
+﻿@using WebQuanLyQuanTraSua.Models;
+@model IEnumerable<MENU>
+
+<!-- Item starts -->
+<div class="menu-item">
+    @foreach (var item in Model)
+    {
+        <img src="@Url.Content("~/Content/HinhAnhMENU/" + item.HinhAnh)" alt="" class="radius-image img-fluid">
+        <div>
+            <div class="row border-dot no-gutters">
+                <div class="col-8 menu-item-name">
+                    <h6>@item.TenMon </h6>
+                </div>
+                <div class="col-4 menu-item-price text-right">
+                    <h6>@item.Gia VNĐ</h6>
+                </div>
+            </div>
+            <div class="menu-item-description">
+                @*<p>DoubleTee</p>*@
+                <button class="btn btn-default"><a href="@Url.Action("ThemGioHang","GIOHANGs", new { @MaMon = item.MaMon, @strURL = Request.Url.ToString()})" class="item_add">Mua Ngay</a></button> |
+                @*Thêm giỏ hàng Ajax*@
+                <button class="btn btn-default"> <i class="fa fa-shopping-cart"></i> @Ajax.ActionLink("Thêm Vào Giỏ Hàng", "ThemGioHangAjax", "GIOHANGs", new { @MaMon = item.MaMon, @strURL = Request.Url.ToString()}, new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "divGioHang", InsertionMode = InsertionMode.Replace }, null )</button>
+            </div>
+        </div>
+    }
+    </div>
+<!-- Item ends -->

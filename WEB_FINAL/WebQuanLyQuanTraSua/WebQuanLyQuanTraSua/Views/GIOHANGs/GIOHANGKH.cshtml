@@ -1,0 +1,291 @@
+﻿@using WebQuanLyQuanTraSua.Models
+@model List<ItemGioHang>
+
+@{
+    ViewBag.Title = "GIOHANGKH";
+    Layout = "~/Views/Layout/HomeLayout.cshtml";
+}
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Giỏ Hàng - Milk Tea DoubleTee</title>
+
+    <link href="//fonts.googleapis.com/css2?family=Manrope:wght@200;400;600&amp;display=swap" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="~/Content/Layout/bundles/css/style-starter.css">
+</head>
+
+<body>
+
+    <div class="inner-banner">
+    </div>
+    <section class="w3l-breadcrumb">
+        <div class="container">
+            <ul class="breadcrumbs-custom-path">
+                <li><a href="https://localhost:44310/Home/Index">Trang Chủ</a></li>
+                <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span>Giỏ Hàng</li>
+            </ul>
+        </div>
+    </section>
+
+    @if (Model.Count == null || Model.Count == 0)
+    {
+        <div class="title-content mb-5">
+            <h5 class="title-small text-center mb-2">
+                Giỏ hàng rỗng!
+                <a class="btn btn-success" href="/Home/MENUKH">Xem thực đon</a>
+            </h5>
+
+        </div>
+    }
+    else
+    {
+        <div class="container">
+            <div class="title-content mb-5">
+                <h3 class="title-big text-center mb-5">
+                    Giỏ hàng của bạn
+                </h3>
+            </div>
+            <table class="table">
+                <tr>
+                    <td>Mã Món</td>
+                    <td>Tên Món</td>
+                    <td>Hình ảnh</td>
+                    <td>Số lượng</td>
+                    <td>Giá</td>
+                    <td>Thành tiền</td>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.MaMon</td>
+                        <td>@item.TenMon</td>
+                        <td><img src="@Url.Content("~/Content/HinhAnhMENU/" + item.HinhAnh)" width="100" height="100" /></td>
+                        <td>@item.SoLuong</td>
+                        <td>@item.Gia VNĐ</td>
+                        <td>@item.ThanhTien VNĐ</td>
+                        <td>
+                            <div class="btn btn-default">@Html.ActionLink("Sửa", "SuaGioHang", new { @MaMon = item.MaMon })</div>
+                            <div class="btn btn-default">@Html.ActionLink("Xóa", "XoaGioHang", new { @MaMon = item.MaMon })</div>
+                        </td>
+
+                    </tr>
+                }
+            </table>
+        </div>
+
+
+        using (Html.BeginForm("DatHang", "GIOHANGs"))
+        {
+
+
+            if (Session["quyen"] == null)
+            {
+                @*Thiết kế form lưu thông tin khách hàng đối với khách hàng chưa có tài khoản*@
+                <div class="ThongTinMuaHang">
+                    @*<table align="center" class="table">
+                            <tr>
+                                <td align="center" colspan="2"><b>Thông tin khách hàng</b></td>
+                            </tr>
+                            <tr>
+                                <td>Họ và tên:</td>
+                                <td>
+                                    @Html.TextBox("HoTen")
+                                    <p style="color:red;" id="TB_HoTen"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Địa chỉ:</td>
+                                <td>
+                                    @Html.TextArea("DiaChiKH")
+                                    <p style="color:red;" id="TB_DiaChiKH"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td>
+                                    @Html.TextBox("EmailKH")
+                                    <p style="color:red;" id="TB_EmailKH"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Số điện thoại:</td>
+                                <td>
+                                    @Html.TextBox("SoDienThoai")
+                                    <p style="color:red;" id="TB_SoDienThoai"></p>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    @Html.Hidden("MaKHLA", 1)
+                                </td>
+                            </tr>
+                        </table>*@
+
+
+
+                    <div class="container">
+                        <div class="title-content mb-5">
+                            <h5 class="title-small text-center mb-2">Thông tin khách hàng</h5>
+                        </div>
+
+                        <div class="grid contact-grids pt-3">
+                            <div class="contact-left">
+                                <div class="grid">
+                                    <span class="fa fa-map-marker"></span>
+                                    <div class="location-info">
+                                        <span>Trụ sở chính:</span>
+                                        <p> Số 1 Võ Văn Ngân, Linh Chiểu, Thủ Đức </p>
+                                        <p>Trường Đại học Sư phạm Kỹ thuật</p>
+                                        <p>Thành phố Hồ Chí Minh, Việt Nam.</p>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <span class="fa fa-envelope-o"></span>
+                                    <div class="email-info">
+                                        <span>Giải đáp thắc mắc:</span>
+                                        <a href="mailto:18110203@student.hcmute.edu.vn">18110203@student.hcmute.edu.vn</a>
+                                        <a href="mailto:18110205@student.hcmute.edu.vn">18110205@student.hcmute.edu.vn</a>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <span class="fa fa-phone"></span>
+                                    <div class="email-info">
+                                        <span>Số điện thoại tư vấn:</span>
+                                        <a href="tel: 0968892926"> (+84) 968892926</a><br>
+                                        <a href="tel: 0971507613"> (+84) 971507613</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts12-main">
+
+
+                                <div class="input-grids">
+                                    <div>
+
+                                        <label class="form-field">Họ và tên:</label>
+                                        @Html.TextBox("HoTen")
+                                        <p style="color:red;" id="TB_HoTen"></p>
+                                    </div>
+
+                                    <div>
+                                        <label class="form-field">Email:</label>
+                                        @Html.TextBox("EmailKH")
+                                        <p style="color:red;" id="TB_EmailKH"></p>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="input-grids">
+                                    <div>
+
+                                        <label class="form-field">Địa chỉ:</label>
+                                        @Html.TextArea("DiaChiKH")
+                                        <p style="color:red;" id="TB_DiaChiKH"></p>
+                                    </div>
+
+                                    <div>
+                                        <label class="form-field">Số điện thoại:</label>
+                                        @Html.TextBox("SoDienThoai")
+                                        <p style="color:red;" id="TB_SoDienThoai"></p>
+                                    </div>
+
+                                </div>
+
+
+
+                                <div>
+                                    <label class="form-field"></label>
+                                    @Html.Hidden("MaKHLA", 1)
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="divDatHang" style="text-align:right;">
+                            <input type="submit" value="Đặt Hàng" class="btn btn-danger" id="btnDatHang" />
+                            @Html.ActionLink("Mua tiếp", "MENUKH", "Home", new { @class = "btn btn-success" })
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+            }
+            else
+            {
+                <div class="container">
+                    <div class="divDatHang" style="text-align:right;">
+                        <input type="submit" value="Đặt Hàng" class="btn btn-danger" />
+                        @Html.ActionLink("Mua tiếp", "MENUKH", "Home", new { @class = "btn btn-success" })
+                    </div>
+                </div>
+            }
+
+
+        }
+
+
+    }
+
+    @*Kiểm tra validation thông qua jquery*@
+    <script>
+        $("#btnDatHang").click(function () {
+            var error = 0;
+            if ($("#HoTen").val() == "") {
+                $("#TB_HoTen").text("Chưa nhập tên khách hàng!");
+                error++;
+            }
+            else {
+
+                $("#TB_HoTen").text("");
+            }
+
+            if ($("#DiaChiKH").val() == "") {
+                $("#TB_DiaChiKH").text("Chưa nhập tên địa chỉ!");
+                error++;
+            }
+            else {
+                $("#TB_DiaChiKH").text("");
+            }
+
+
+            dinhdang = /^[0-9A-Za-z]+[0-9A-Za-z_]*@@[\w\d.]+\.\w{2,4}$/;
+            KTEmail = dinhdang.test($('#EmailKH').val());
+            if (!KTEmail) {
+                $('#TB_EmailKH').text("Chưa nhập hoặc Email không hợp lệ!");
+                error++;
+
+            }
+
+
+
+            if ($("#SoDienThoai").val() == "") {
+                $("#TB_SoDienThoai").text("Chưa nhập số điện thoại!");
+                error++;
+            }
+            else {
+
+                $("#TB_SoDienThoai").text("");
+            }
+            if (error != 0) {
+                //Ngăn submit dữ liệu lên sql
+                return false;
+            }
+
+        });
+
+    </script>
+
+</body>
+
+
+

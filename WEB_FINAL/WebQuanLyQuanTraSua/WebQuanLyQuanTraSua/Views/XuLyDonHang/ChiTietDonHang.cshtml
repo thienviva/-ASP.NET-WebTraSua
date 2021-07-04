@@ -1,0 +1,109 @@
+﻿@using WebQuanLyQuanTraSua.Models;
+@model IEnumerable<WebQuanLyQuanTraSua.Models.CHITIETHD>
+
+
+
+@{
+    ViewBag.Title = "ChiTietDonHang";
+    Layout = "~/Views/Layout/HomeLayout.cshtml";
+}
+
+@{
+    IEnumerable<CHITIETHD> lstCTHD = ViewBag.ListCTHD as IEnumerable<CHITIETHD>;
+    IEnumerable<HOADON> lstHD1 = ViewBag.ListHD1 as IEnumerable<HOADON>;
+
+}
+
+<div class="container">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="title-content mb-5">
+            <h3 class="title-big text-center mb-5">
+                Chi Tiết Đơn Hàng (Mã Đơn Hàng = [@Html.DisplayFor(model => lstCTHD.FirstOrDefault().MaHD)])
+            </h3>
+        </div>
+        <table class="table">
+            <tr>
+                <th>
+                    Mã món:
+                </th>
+                <th>
+                    Tên món:
+                </th>
+                <th>
+                    Hình ảnh:
+                </th>
+                <th>
+                    Số lượng:
+                </th>
+                <th>
+                    Giá(VNĐ):
+                </th>
+                <th>
+                    Địa chỉ giao hàng (Khách hàng có tài khoản):
+                </th>
+                <th>
+                    Địa chỉ giao hàng (Khách hàng không có tài khoản):
+                </th>
+
+                <th>
+                    Tình trạng:
+                </th>
+
+                <th>
+                    Bàn:
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in lstCTHD)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MENU.MaMon)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MENU.TenMon)
+                    </td>
+                    <td>
+                        <img src="@Url.Content("~/Content/HinhAnhMENU/" + item.MENU.HinhAnh)" width="70" height="70" />
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SoLuong)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Gia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HOADON.KHACHHANG.DiaChi)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HOADON.KHACHHANGLA.DiaChiKH)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HOADON.TinhTrangHD)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ban)
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+        <h4 class="title-big text-right mb-5">
+            Tổng tiền thanh toán: @Html.DisplayFor(model => lstCTHD.FirstOrDefault().HOADON.TongGia) VNĐ
+        </h4>
+
+        <div class="btn btn-default title-big text-right mb-5">
+            @Html.ActionLink("Trở về danh sách", "XuLyDonHang")
+        </div>
+
+    }
+</div>

@@ -1,0 +1,105 @@
+﻿@using WebQuanLyQuanTraSua.Models
+@model ItemGioHang
+
+@{
+    ViewBag.Title = "SuaGioHang";
+    Layout = "~/Views/Layout/HomeLayout.cshtml";
+}
+
+@{ 
+    List<ItemGioHang> lstGioHang = ViewBag.GioHang as List<ItemGioHang>;
+}
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Chỉnh Sửa</title>
+
+    <link href="//fonts.googleapis.com/css2?family=Manrope:wght@200;400;600&amp;display=swap" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="~/Content/Layout/bundles/css/style-starter.css">
+</head>
+
+<body>
+
+    <div class="inner-banner">
+    </div>
+    <section class="w3l-breadcrumb">
+        <div class="container">
+            <ul class="breadcrumbs-custom-path">
+                <li><a href="https://localhost:44310/GIOHANGs/GIOHANGKH">Giỏ Hàng</a></li>
+                <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span>Chỉnh sửa</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="container">
+        <table class="table">
+            <tr>
+                <td>Mã Món</td>
+                <td>Tên Món</td>
+                <td>Hình ảnh</td>
+                <td>Số lượng</td>
+                <td>Giá</td>
+                <td>Thành tiền</td>
+            </tr>
+            @foreach (var item in lstGioHang)
+            {
+                //Sản phẩm đang chỉnh sửa được gửi từ bên trang GIOHANGKH
+                if (Model.MaMon == item.MaMon)
+                {
+                    using (Html.BeginForm("CapNhatGioHang", "GIOHANGs"))
+                    {
+                        <tr>
+                            <td>@item.MaMon @Html.Hidden("MaMon", item.MaMon)</td>
+                            <td>@item.TenMon</td>
+                            <td><img src="@Url.Content("~/Content/HinhAnhMENU/" + item.HinhAnh)" width="100" height="100" /></td>
+                            <td>
+                                @Html.TextBox("SoLuong", item.SoLuong, new { @class = "SoLuongThayDoi" })
+                                <p id="TB_SoLuongThayDoi"></p>
+                            </td>
+                            <td>@item.Gia VNĐ</td>
+                            <td>@item.ThanhTien VNĐ</td>
+                            <td><input type="submit" value="Cập nhật" class="btn btn-success" id="btnCapNhatGH" /></td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td>@item.MaMon</td>
+                        <td>@item.TenMon</td>
+                        <td><img src="@Url.Content("~/Content/HinhAnhMENU/" + item.HinhAnh)" width="100" height="100" /></td>
+                        <td>@item.SoLuong</td>
+                        <td>@item.Gia VNĐ</td>
+                        <td>@item.ThanhTien VNĐ</td>
+                        <td>
+                            <div class="btn btn-default">@Html.ActionLink("Sửa", "SuaGioHang", new { @MaMon = item.MaMon })</div>
+                            <div class="btn btn-default">@Html.ActionLink("Xóa", "XoaGioHang", new { @MaMon = item.MaMon })</div>
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+
+        @*Kiểm tra số lượng thay đổi*@
+
+        <script>
+            $("#btnCapNhatGH").click(function () {
+                //Kiểm tra số lượng không phải là số hoặc nhỏ hơn 0
+                var SoLuong = $(".SoLuongThayDoi").val();
+                if (isNaN(SoLuong) == true || SoLuong < 0) {
+                    $("#TB_SoLuongThayDoi").text("Số lượng thay đổi không hợp lệ!")
+                    return false
+                }
+            })
+
+        </script>
+
+</body>
+
+

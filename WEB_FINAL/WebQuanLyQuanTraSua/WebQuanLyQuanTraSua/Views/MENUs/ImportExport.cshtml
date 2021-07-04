@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "ImportExport";
+    Layout = "~/Views/Layout/AdminLayout.cshtml";
+}
+
+<h2>Nhập Xuất Dữ Liệu File Excel</h2>
+
+<div style="padding-top:5em"></div>
+<a class="btn btn-default" href="@Url.Action("ExportMENU")">Tải Danh Sách MENU</a>
+
+<fieldset>
+
+    @using (Html.BeginForm("ImportFromExcel", "MENUs", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.ValidationSummary();
+        <input type="file" name="postedFile" />
+
+        <div>
+            <input type="submit" button id="upload" value="Import" class="btn btn-success" />
+        </div>
+    }
+
+</fieldset>
+
+
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <script>
+        $("#upload").click(function () {
+            debugger;
+            if (window.FormData == undefined)
+                alert("Error: FormData is undefined");
+
+            else {
+                var fileUpload = $("#postedFile").get(0);
+                var files = fileUpload.files;
+
+                var fileData = new FormData();
+
+                fileData.append(files[0].name, files[0]);
+
+                $.ajax({
+                    url: '/MENUs/ImportFromExcel',
+                    type: 'post',
+                    datatype: 'json',
+                    contentType: false,
+                    processData: false,
+                    async: false,
+                    data: fileData,
+                    success: function (response) {
+                        alert(response);
+                    }
+                });
+            }
+
+        });
+    </script>
+

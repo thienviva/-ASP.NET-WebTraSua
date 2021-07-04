@@ -1,0 +1,307 @@
+﻿<!DOCTYPE html>
+
+
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <!-- Style-CSS -->
+    <link href="~/Content/Layout/bundles/css/style-starter.css" rel="stylesheet" type="text/css">
+    <!-- //Style-CSS -->
+    <!-- google fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Manrope:wght@200;400;600&amp;display=swap" rel="stylesheet">
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+
+
+    <script src="~/Scripts/Chart.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+    <link href="~/Content/Home/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+
+    <link href="~/Content/Home/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="~/Content/Home/css/style.css" rel="stylesheet" type="text/css" media="all">
+
+    <link href="//fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Muli:300,400,600" rel="stylesheet">
+
+</head>
+<body>
+    <!-- page -->
+    <!-- ############################ Đăng nhập ############################## -->
+    <div class="modal fade" id="dang_nhap">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Đăng Nhập Nhanh</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <form method="post" action="/Home/DangNhap" id="frm-login">
+                    <div class="modal-body">
+                        <div id="err_login"></div>
+                        <div id="login_here">
+                            <label>Tài khoản: </label>
+                            <input type="text" class="form-control" name="username" id="username" />
+                            <label>Mật khẩu: </label>
+                            <input type="password" class="form-control" name="password" id="password" />
+                            <br />
+                        </div>
+                        <br />
+                        <div id="waiting" style="display: none;">
+                            <div class="progress progress-striped active">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" id="login_btn">Đăng nhập</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Thoát</button>
+                    </div>
+                </form>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- ===================================Ajax Login=========================-->
+    <script>
+        $(document).ready(function () {
+            $("#frm-login").submit(function (e) {
+                if ($("#username").val() == '') {
+                    $('#err_login').html('<div class="alert alert-danger">Chưa nhập tài khoản!</div>');
+                    $("#username").focus();
+                    return false;
+                }
+                else if ($("#password").val() == '') {
+                    $('#err_login').html('<div class="alert alert-danger">Chưa nhập mật khẩu!</div>');
+                    $("#password").focus();
+                    return false;
+                }
+                else {
+                    var form_data_login = {
+                        username: $("#username").val(),
+                        password: $("#password").val()
+                    };
+                    $.ajax({
+                        url: '/Home/DangNhap',
+                        type: 'POST',
+                        async: true,
+                        data: form_data_login,
+                        success: function (msg_login) {
+                            //alert(msg);
+                            if (msg_login == 'false') {
+                                $('#err_login').html('<div class="alert alert-danger">Tài khoản hoặc mật khẩu không chính xác!</div>');
+                                $("#password").val("");
+                                $("#password").focus();
+                                return false;
+                            }
+                            else if (msg_login == 'er_block') {
+                                $('#err_login').html('<div class="alert alert-danger">Tài khoản đang bị khóa!</div>');
+                            }
+                            else {
+                                $("#login_here").hide();
+                                $(".modal-footer").hide();
+
+                                $('#err_login').html('<div class="alert alert-success"><strong>Đăng nhập thành công</strong><span>--> Hệ thống tự chuyển sau vài giây ...</span></div>');
+                                setTimeout(
+                                    //chuyển đến địa chỉ msg_login của controler gửi qua
+                                    function () {
+                                        window.location.href = '' + msg_login + '';
+                                    }, 1000);
+                            }
+                        }
+                    });
+                    return false;
+                }
+            });
+        })
+        //Load wating bar
+        $(document).ajaxStart(function () {
+            $("#waiting").show();
+        }).ajaxStop(function () {
+            $("#waiting").hide();
+        });
+    </script>
+
+
+    <div class="w3l-header-4">
+        <header id="headers4-block" class="bg bg1 py-3">
+            <div class="container">
+                <div class="d-grid nav-mobile-block header-align">
+                    <div class="logo">
+                        <a class="navbar-brand editContent" href="https://localhost:44310/Home/Index" style="outline: none; cursor: inherit; outline-offset: -2px; color: rgb(209, 119, 33); font-size: 32px; background-color: rgba(0, 0, 0, 0); font-family: Manrope, sans-serif;">
+                            <span class="fa fa-coffee"></span>Milk Tea DoubleTee
+                        </a>
+                        <!-- if logo is image enable this
+                        <a class="brand-logo" href="#index.html">
+                            <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+                        </a> -->
+                    </div>
+                    <input type="checkbox" id="nav">
+                    <label class="nav" for="nav"></label>
+                    <nav>
+                        <label for="drop" class="toggle"><span class="fa fa-bars" style="outline: none; cursor: inherit;"></span></label>
+                        <input type="checkbox" id="drop">
+                        @if (Session["quyen"] == null )
+                        {
+                            <ul class="menu">
+                                <li class="propClone"><a href="https://localhost:44310/Home/Index" class="editContent" style="outline: none; cursor: inherit;">Trang Chủ</a></li>
+                                <li class="propClone"><a href="https://localhost:44310/Home/MENUKH" class="editContent" style="outline: none; cursor: inherit;">Thực Đơn</a></li>
+                                <li class="propClone"><a href="https://localhost:44310/Login/Login" class="editContent" style="outline: none; cursor: inherit;">Đăng Nhập</a></li>
+                                <li class="propClone"><a href="https://localhost:44310/Registration/Registration" class="editContent" style="outline: none; cursor: inherit;">Đăng Ký</a></li>
+                                <li class="propClone"><a data-toggle="modal" href="#dang_nhap" class="editContent" style="outline: none; cursor: inherit;">Đăng Nhập Nhanh</a></li>
+                            </ul>
+                            <ul><li>@Html.Action("GioHangPartial", "GIOHANGs")</li></ul>
+                        }
+                        else
+                        {
+                    <ul class="menu">
+                        @if (Session["quyen"] == "2" || Session["quyen"] == "1")
+                        {
+                            <li class="propClone"><a href="https://localhost:44310/XuLyDonHang/XuLyDonHang" class="editContent" style="outline: none; cursor: inherit;">Các Đơn Hàng</a></li>
+                            <li class="propClone"><a href="https://localhost:44310/Home/MENUKH" class="editContent" style="outline: none; cursor: inherit;">Thực Đơn</a></li>
+                            <li class="propClone"><a href="https://localhost:44310/ChartJs/ThongKe" class="editContent" style="outline: none; cursor: inherit;">Thống Kê</a></li>
+                        }
+
+                        else
+                        {
+                            <li class="propClone"><a href="https://localhost:44310/ThongTinKhachHang/ThongTinKhachHang" class="editContent" style="outline: none; cursor: inherit;">Thông Tin Cá Nhân</a></li>
+                            <li class="propClone"><a href="https://localhost:44310/Home/MENUKH" class="editContent" style="outline: none; cursor: inherit;">Thực Đơn</a></li>
+                            @Html.Action("GioHangPartial", "GIOHANGs")
+                        }
+
+                        <li>@Html.ActionLink("Đăng xuất", "Logout", "Home")</li>
+                    </ul> 
+
+                            <ul>
+                                <li>
+                                    Xin Chào, @Session["UserName"]
+                                    
+                                </li>
+                            </ul>
+
+                        }
+                    </nav>
+                </div>
+            </div>
+        </header>
+    </div>
+
+
+
+    @RenderBody()
+
+
+    <section class="w3l-footer-29-main py-5">
+        <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 footer-left-grid">
+                    <div class="footer-w3layouts-head">
+                        <h2><a href="index.html">DoubleTee</a></h2>
+                    </div>
+                    <div class="mb-3 pt-lg-4 pt-3 footer-address text-white">
+                        <span>Trụ sở chính:</span>
+                        <div class="pt-2 footer_grid_left">
+                            <p>
+                                Trường Đại Học Sư Phạm Kỹ Thuật TP.HCM
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mb-3 footer-addresstext-white text-white">
+                        <span>Email:</span>
+                        <div class="pt-2 footer_grid_left">
+                            <p>
+                                <a href="mailto:18110203@student.hcmute.edu.vn">18110203@student.hcmute.edu.vn</a>
+                                <a href="mailto:18110205@student.hcmute.edu.vn">18110205@student.hcmute.edu.vn</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mb-3 footer-address text-white">
+                        <span>Số điện thoại:</span>
+                        <div class="pt-2 footer_grid_left">
+                            <p>+(84) 968892926</p>
+                            <p>+(84) 971507603</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pt-lg-5 pt-md-4 pt-sm-3 pt-3 footer-left-grid">
+                    <div class="mb-3 footer-address text-white">
+                        <span>Thành viên:</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <img src="~/Content/Home/images/avatar.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 footer-us ">
+                            <p>Họ tên: Huỳnh Nhựt Thiên</p>
+                            <p>MSSV:   18110203</p>
+                            <p>Trường: ĐH SPKT TP.HCM</p>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <img src="~/Content/Home/images/avatar.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 footer-us ">
+                            <p>Họ tên: Đinh Minh Thiện</p>
+                            <p>MSSV:   18110205</p>
+                            <p>Trường: ĐH SPKT TP.HCM</p>
+                        </div>
+                    </div>
+                </div>
+                @*<div class="col-lg-5 contact-form pb-lg-3 pb-2">
+                        <form action="#" method="post">
+                            <div class="row wthree-wls-contact-mid ">
+                                <div class="col-lg-6 col-md-6 col-sm-6 form-group contact-forms">
+                                    <input type="text" class="form-control" placeholder="Name" required="">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 form-group contact-forms">
+                                    <input type="email" class="form-control" placeholder="Email" required="">
+                                </div>
+                            </div>
+                            <div class="row wthree-wls-contact-mid ">
+                                <div class="col-lg-6 col-md-6 col-sm-6 form-group contact-forms">
+                                    <input type="text" class="form-control" placeholder="Phone" required="">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 form-group contact-forms">
+                                    <input type="text" class="form-control" placeholder="subjecct" required="">
+                                </div>
+                            </div>
+                            <div class="form-group contact-forms">
+                                <textarea class="form-control" placeholder="Meassage" required=""></textarea>
+                            </div>
+                            <button type="submit" class="btn sent-butnn btn-lg">Send</button>
+                        </form>
+                    </div>*@
+            </div>
+            <div class="bottem-wthree-footer text-center pt-lg-4 pt-3">
+                <p>
+                    © Đồ Án Lập Trình Website | Được viết bởi: Huỳnh Nhựt Thiên và Đinh Minh Thiện
+                </p>
+            </div>
+            <!-- move icon -->
+            <div class="text-center">
+                <a href="#" class="move-top text-center mt-3"></a>
+            </div>
+            <!--//move icon -->
+        </div>
+    </section>
+
+
+
+
+    
+    @Scripts.Render("~/bundles/bootstrap")
+
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿@model WebQuanLyQuanTraSua.Models.PHANCA
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Layout/AdminLayout.cshtml";
+}
+
+<h2>Chi Tiết</h2>
+
+<div>
+    <h4>PHANCA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayLamViec)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayLamViec)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GioLamViec)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GioLamViec)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CHINHANH.TenCN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHINHANH.TenCN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NHANVIEN.TenNV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NHANVIEN.TenNV)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <div class="btn btn-default">
+        @Html.ActionLink("Chỉnh sửa", "Edit", new { /* id = Model.PrimaryKey */ })
+    </div>
+    <div class="btn btn-default">
+        @Html.ActionLink("Trở về danh sách", "Index")
+    </div>
+</p>

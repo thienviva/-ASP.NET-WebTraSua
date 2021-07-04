@@ -1,0 +1,534 @@
+﻿@using WebQuanLyQuanTraSua.Models;
+@model IEnumerable<MENU>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/HomeLayout.cshtml";
+}
+
+@{
+    IEnumerable<MENU> lstTSBC = ViewBag.ListTSBC as IEnumerable<MENU>;
+    IEnumerable<MENU> lstDXBC = ViewBag.ListDXBC as IEnumerable<MENU>;
+    IEnumerable<MENU> lstTPBC = ViewBag.ListTPBC as IEnumerable<MENU>;
+}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trang Chủ - Milk Tea DoubleTee</title>
+    <link href="~/Content/Home/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+
+    <link href="~/Content/Home/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="~/Content/Home/css/style.css" rel="stylesheet" type="text/css" media="all">
+
+    <link href="//fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Muli:300,400,600" rel="stylesheet">
+
+</head>
+
+
+
+
+<div class="main-top" id="home">
+    <div class="slider-img one-img">
+        <div class="container">
+            <div class="slider-info">
+                <div class="row">
+                    <div class="col-lg-7 txt-caption">
+                        <div class="binner-mid">
+                            <h4>MILK TEA DOUBLETEE</h4>
+                        </div>
+                        <p>là cửa hàng thức uống thu hút được sự chú ý của rất nhiều khách hàng, đặc biệt là các bạn trẻ tại Việt Nam, với những thức uống ngon hấp dẫn, nguyên liệu tự nhiên và đặc biệt là an toàn vệ sinh thực phẩm ẩm thực nơi đây đã làm hài lòng khách hàng.</p>
+                    </div>
+                    <div class="col-lg-5 register">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="banner-info-bg">
+    <div class="banner-bottom">
+        <div class="container">
+            <div class="row w3layout-abt-info text-center">
+                <div class="col-lg-3 col-md-6 col-sm-6 abut-list-w3layouts p-0 color-four">
+                    <div class="abtr-inner-sub">
+                        <span class="fa fa-star-o" aria-hidden="true"></span>
+                        <div class="abt-icon-list-wls mt-3">
+                            <h4>Chất Lượng</h4>
+                            <p class="mt-3">An toàn, vệ sinh và ngon miệng. Việc sử dụng các nguyên liệu an toàn, tự nhiên và vệ sinh là ưu tiên hàng đầu của DoubleTee.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 abut-list-w3layouts p-0 color-one">
+                    <div class="abtr-inner-sub">
+                        <span class="fa fa-smile-o" aria-hidden="true"></span>
+                        <div class="abt-icon-list-wls mt-3">
+                            <h4>Tận Tâm</h4>
+                            <p class="mt-3">DoubleTee mong muốn làm hài lòng khách hàng tốt nhất với tác phong phục vụ chuyên nghiệp và thân thiện, luôn lắng nghe những đóng góp của khách hàng.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 abut-list-w3layouts p-0 color-two">
+                    <div class="abtr-inner-sub">
+                        <span class="fa fa-thumbs-o-up" aria-hidden="true"></span>
+                        <div class="abt-icon-list-wls mt-3">
+                            <h4>Uy Tín</h4>
+                            <p class="mt-3">Dựa trên hai nền tảng cốt lõi là Chất Lượng và Dịch Vụ, DoubleTee luôn nỗ lực xây dựng và duy trì hình ảnh thương hiệu đáng tin cậy trong mắt khách hàng.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 abut-list-w3layouts p-0 color-three">
+                    <div class="abtr-inner-sub">
+                        <span class="fa fa-diamond" aria-hidden="true"></span>
+                        <div class="abt-icon-list-wls mt-3">
+                            <h4>Khác Biệt</h4>
+                            <p class="mt-3">Sự khác biệt là bí quyết thành công, đảm bảo mang tới cho các bạn một trải nghiệm ăn uống và phục vụ độc nhất không ở đâu có.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //banner -->
+<!--About -->
+<section class="about py-lg-4 py-md-3 py-sm-3 py-3 mt-lg-5" id="about">
+    <div class="container py-lg-5 py-md-5 py-sm-4 py-3 mt-lg-3">
+        <h3 class="title text-center mb-2">ABOUT DOUBLETEE</h3>
+        <div class="line-w3ls-title text-center mb-md-5 mb-sm-4 mb-3">
+            @*<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br>tempor incididunt ut labore et</p>*@
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 about-right">
+                <img src="~/Content/Home/images/ts.png" alt="" class="img-fluid">
+                <div class="about-four-wthree mt-3">
+                    <h4>Các Thức Uống HOT</h4>
+                </div>
+                <div class="outs_more-buttn mt-md-4 mt-3">
+                    <a href="#1">Xem thêm</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 about-right">
+                <img src="~/Content/Home/images/Member.png" alt="" class="img-fluid">
+                <div class="about-four-wthree mt-3">
+                    <h4>Các Thành Viên</h4>
+                </div>
+                <div class="outs_more-buttn mt-md-4 mt-3">
+                    <a href="#team">Xem thêm</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 about-right">
+                <img src="~/Content/Home/images/location.png" alt="" class="img-fluid">
+                <div class="about-four-wthree mt-3">
+                    <h4>Cửa Hàng</h4>
+                </div>
+                <div class="outs_more-buttn mt-md-4 mt-3">
+                    <a href="#location">Xem thêm</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 about-right">
+                <img src="~/Content/Home/images/book.png" alt="" class="img-fluid">
+                <div class="about-four-wthree mt-3">
+                    <h4>Các Blog Tiêu Biểu</h4>
+                </div>
+                <div class="outs_more-buttn mt-md-4 mt-3">
+                    <a href="#blog">Xem thêm</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--//About -->
+<!-- clients -->
+<section class="clients py-lg-4 py-md-3 py-sm-3 py-3" id="clients">
+    <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
+        <h3 class="title text-center mb-2">4 GIÁ TRỊ LÀM NÊN MILK TEA DOUBLETEE</h3>
+        <div class="row">
+            <div class="col-md-3 col-sm-4 news-img text-center">
+                <img src="~/Content/Home/images/chanthanh.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-9 col-sm-8 news-wthree-text text-left">
+                <p>
+                    Bắt đầu từ sứ mệnh “Deliver Happiness” - Trao gửi hạnh phúc,
+                    chúng tôi tin rằng khi làm việc với tất cả sự chân thành và tôn trọng những giá trị nguyên bản của từng nhân viên cũng như khách hàng,
+                    tất cả mọi người đến với DoubleTee đều nhận được những niềm vui nho nhỏ,
+                    được tốt lên và làm người khác tốt lên từng ngày.
+                </p>
+                <h4 class="mt-3 ">Chân Thành</h4>
+            </div>
+        </div>
+        <div class="row mt-lg-5 mt-md-4 mt-3">
+            <div class="col-md-9 col-sm-8 news-wthree-text text-right">
+                <p>
+                    Mỗi sản phẩm, chiến dịch của Milk Tea DoubleTee luôn xoay quanh con người.
+                    Chúng tôi lấy khách hàng, nhân viên và cộng đồng làm trọng tâm cho mọi quyết định.
+                    Vì khi có bạn, Milk Tea DoubleTee được tiếp thêm sức mạnh để cùng lan toả những giá trị tốt đẹp cho người trẻ Việt Nam.
+                </p>
+                <h4 class="mt-3 ">
+                    Quan Tâm
+                </h4>
+            </div>
+            <div class="col-md-3 col-sm-4 news-img text-center">
+                <img src="~/Content/Home/images/quantam.png" alt="" class="img-fluid">
+            </div>
+        </div>
+        <div class="row mt-lg-5 mt-md-4 mt-3">
+            <div class="col-md-3 col-sm-4 news-img text-center">
+                <img src="~/Content/Home/images/sangtao.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-9 col-sm-8 news-wthree-text text-left">
+                <p>
+                    Chúng tôi muốn tạo ra dấu ấn khác biệt cho cà phê Việt Nam bằng sự tử tế và cẩn trọng.
+                    5 năm qua, cảm ơn bạn là nguồn động lực giúp chúng tôi nỗ lực đổi mới và kiến tạo mỗi ngày,
+                    để mang lại những thành phẩm tuyệt vời nhất, để trải nghiệm của bạn ngày một tốt hơn.
+                </p>
+                <h4 class="mt-3 ">Sáng Tạo</h4>
+            </div>
+        </div>
+        <div class="row mt-lg-5 mt-md-4 mt-3">
+            <div class="col-md-9 col-sm-8 news-wthree-text text-right">
+                <p>
+                    Tại Milk Tea DoubleTee, những tâm hồn đồng điệu cùng nhau làm việc cần mẫn và chung sức cho những mục tiêu lớn.
+                    Mỗi ngày với chúng tôi đều là một ngày được học hỏi,
+                    trải nghiệm những điều mới, đón nhận thách thức và dấn thân trên con đường phía trước.
+                    Hành trình tiếp theo, chúng tôi mong muốn được cùng bạn nuôi dưỡng ước mơ và kiên trì đi đến tận cùng ước mơ của mình.
+                </p>
+                <h4 class="mt-3 ">
+                    Dũng Cảm
+                </h4>
+            </div>
+            <div class="col-md-3 col-sm-4 news-img text-center">
+                <img src="~/Content/Home/images/dungcam.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- service -->
+<section class="service py-lg-4 py-md-3 py-sm-3 py-3" id="service">
+    <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
+        <h3 class="title text-center mb-2">Ở DOUBLETEE CÓ GÌ?</h3>
+        <div class="serv-left-model">
+            <div class="service-w3layouts-img">
+                <img src="~/Content/Home/images/hinhnen1.jpg" alt=" " class="img-fluid">
+            </div>
+            <div class="service-w3layouts-two row">
+                <div class="col-lg-6 col-md-6 serice-inn-two">
+                    <div class="mb-2 service-two-top">
+                        <h5>
+                            Thức Uống Đặc Biệt
+                        </h5>
+                    </div>
+                    <div class="mb-lg-4 mb-md-3 mb-3 ser-two-txt">
+                        <p>
+                            Dòng thức uống đặc biệt kết hợp giữa trà nguyên chất với lớp milk foam béo cùng vị mặn nhẹ đặc trưng mang đến điểm nhấn sáng tạo cho một thức uống quen thuộc.
+                        </p>
+                    </div>
+                    <div class="mb-2 service-two-top">
+                        <h5>
+                            Trà Nguyên Chất
+                        </h5>
+                    </div>
+                    <div class="mb-lg-4 mb-md-3 mb-3 ser-two-txt">
+                        <p>
+                            Dòng trà nguyên chất được nhập khẩu trực tiếp từ Đài Loan đậm đà và nguyên bản được sử dụng trong vòng 4 giờ sau khi nấu đảm bảo hương vị và chất lượng hoàn hảo!
+                        </p>
+                    </div>
+                    <div class="outs_more-buttn mt-md-4 mt-3">
+                        <a href="#1">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="serv-left-model">
+            <div class="service-w3layouts-img">
+                <img src="~/Content/Home/images/hinhnen2.jpg" alt=" " class="img-fluid">
+            </div>
+            <div class="service-w3layouts-two row">
+                <div class="col-lg-6 abt-inn-two about-top">
+                    <div class="mb-2 service-two-top">
+                        <h5>
+                            Trà Sữa
+                        </h5>
+                    </div>
+                    <div class="mb-lg-4 mb-md-3 mb-3 ser-two-txt">
+                        <p>
+                            Một trong những dòng thức uống nổi bật với nhiều lựa chọn độc đáo. Đặc biệt với Trà sữa Oolong 3J, Trà sữa pudding đậu đỏ với topping đa dạng mang đậm bản sắc Đài Loan.
+                        </p>
+                    </div>
+                    <div class="mb-2 service-two-top">
+                        <h5>
+                            Thức Uống Đá Xay
+                        </h5>
+                    </div>
+                    <div class="mb-lg-4 mb-md-3 mb-3 ser-two-txt">
+                        <p>
+                            Mát lạnh và ngọt ngào, 5 loại đá xay mang đến một trải nghiệm về đá xay mới tại DoubleTee.
+                        </p>
+                    </div>
+                    <div class="mb-2 service-two-top">
+                        <h5>
+                            Thức Uống Sáng Tạo
+                        </h5>
+                    </div>
+                    <div class="mb-lg-4 mb-md-3 mb-3 ser-two-txt">
+                        <p>
+                            Dòng trà kết hợp với trái cây thanh mát mang đậm hương vị tươi mới.
+                        </p>
+                    </div>
+                    <div class="outs_more-buttn mt-md-4 mt-3 about-top">
+                        <a href="#1">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--//service -->
+<!-- Trà Sữa -->
+<section class="gallery pt-lg-4 pt-md-3 pt-sm-3 pt-3" id="1">
+    <h3 class="title text-center mb-2">TRÀ SỮA ĐƯỢC ƯA CHUỘNG</h3>
+    @Html.Partial("~/Views/MENUs/MENUStyle1Partial.cshtml", lstTSBC)
+
+</section>
+<!-- Đá Xay -->
+<section class="gallery pt-lg-4 pt-md-3 pt-sm-3 pt-3" id="2">
+    <h3 class="title text-center mb-2">ĐÁ XAY ĐƯỢC ƯA CHUỘNG</h3>
+    @Html.Partial("~/Views/MENUs/MENUStyle1Partial.cshtml", lstDXBC)
+</section>
+
+<!-- TOPPING -->
+<section class="gallery pt-lg-4 pt-md-3 pt-sm-3 pt-3" id="3">
+    <h3 class="title text-center mb-2">TOPPING ĐƯỢC ƯA CHUỘNG</h3>
+    @Html.Partial("~/Views/MENUs/MENUStyle1Partial.cshtml", lstTPBC)
+</section>
+<!--// Trà sữa - main -->
+
+<!--//gallery -->
+<!--blog -->
+<section class="blog py-lg-4 py-md-3 py-sm-3 py-3" id="blog">
+    <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
+        <h3 class="title text-center mb-2">MILK TEA BLOG</h3>
+        <div class="line-w3ls-title text-center mb-md-5 mb-sm-4 mb-3">
+            @*<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br>tempor incididunt ut labore et</p>*@
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex">
+                <div class="blog-txt-color">
+                    <img src="~/Content/Home/images/blg1.jpg" class="img-thumbnail" alt="">
+                    <div class="blog-txt-info">
+                        <h4 class="mt-2"><a href="https://blog.maybanhang.net/9-tiet-lo-bat-ngo-ve-tra-sua">9 Tiết Lô Bất Ngờ Về Trà Sữa</a></h4>
+                        <div class="news-date my-3">
+                            <ul>
+                                <li><span class="fa fa-calendar" aria-hidden="true"></span><a href="#about">12/4/2019</a></li>
+                                <li><span class="fa fa-comments" aria-hidden="true"></span><a href="#about">5 Comments</a></li>
+                            </ul>
+                        </div>
+                        <p>"Trà sữa" - cụm từ có vẻ khá phổ biến và rất được nhiều người biết đến. Có những bạn được mệnh danh là "thánh trà sữa" khi ở nhà trà sữa, đi học trà sữa, đi làm trà sữa, đi chơi cũng trà sữa nốt! Tự tin là thế, nhưng liệu rằng bạn đã biết những con số bất ngờ về trà sữa dưới đây chưa? Hãy cùng khám phá nhé! </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex">
+                <div class="blog-txt-color">
+                    <img src="~/Content/Home/images/blg2.jpg" class="img-thumbnail" alt="">
+                    <div class="blog-txt-info">
+                        <h4 class="mt-2"><a href="https://blog.topcv.vn/su-ra-doi-cua-huyen-thoai-tra-sua-tran-chau-va-bai-hoc-ve-sang-tao-doi-moi-trong-kinh-doanh/">Bài học từ sự thành công của “đế chế” trà sữa trân châu </a></h4>
+                        <div class="news-date my-3">
+                            <ul>
+                                <li><span class="fa fa-calendar" aria-hidden="true"></span><a href="#about">12/4/2019</a></li>
+                                <li><span class="fa fa-comments" aria-hidden="true"></span><a href="#about">5 Comments</a></li>
+                            </ul>
+                        </div>
+                        <p>Trà sữa trân châu trở thành thức quà yêu thích số 1 của giới trẻ vài năm gần đây. Không quá khi nói rằng thức uống này đã thực sự gây nên một “cơn lốc”. Nó càn quét từ Châu Á sang tới Châu Âu và vẫn chưa có dấu hiệu hạ nhiệt.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex">
+                <div class="blog-txt-color">
+                    <img src="~/Content/Home/images/blg3.jpg" class="img-thumbnail" alt="">
+                    <div class="blog-txt-info">
+                        <h4 class="mt-2"><a href="https://hokkaidotea.vn/su-that-ve-loi-ich-viec-uong-tra-sua-it-nguoi-biet/">Sự Thật Về Lợi Ích Của Việc Uống Trà Sữa</a></h4>
+                        <div class="news-date my-3">
+                            <ul>
+                                <li><span class="fa fa-calendar" aria-hidden="true"></span><a href="#about">12/4/2019</a></li>
+                                <li><span class="fa fa-comments" aria-hidden="true"></span><a href="#about">5 Comments</a></li>
+                            </ul>
+                        </div>
+                        <p>Uống trà sữa là sẽ mập? hay nhịn uống trà sữa vì sẽ lên cân”, là câu nói ám ảnh của các nàng. Bạn có biết nếu bạn uống trà sữa đúng chuẩn, cùng với số lượng vừa phải. Trà sữa mang lại nhiều lợi ích lắm đấy. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex mt-lg-5 mt-md-4 mt-3">
+                <div class="blog-txt-color">
+                    <img src="~/Content/Home/images/blg13.jpg" class="img-thumbnail" alt="">
+                    <div class="blog-txt-info">
+                        <h4 class="mt-2"><a href="https://teashop.vn/top-7-nhuong-quyen-tra-sua/">TOP 7 Thương Hiệu Nhượng Quyền Trà Sữa</a></h4>
+                        <div class="news-date my-3">
+                            <ul>
+                                <li><span class="fa fa-calendar" aria-hidden="true"></span><a href="#about">12/4/2019</a></li>
+                                <li><span class="fa fa-comments" aria-hidden="true"></span><a href="#about">5 Comments</a></li>
+                            </ul>
+                        </div>
+                        <p>Nhượng quyền trà sữa là cách làm hợp lý và tiết kiệm chi phí dành cho dân đầu tư muốn tạo ra lợi nhuận. Mọi người chọn nhượng quyền thương hiệu trà sữa khi muốn phát triển quán nhanh, dựa vào sức mạnh thương hiệu đã được gây dựng. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex mt-lg-5 mt-md-4 mt-3">
+                <div class="blog-txt-color">
+                    <img src="~/Content/Home/images/blg11.jpg" class="img-thumbnail" alt="">
+                    <div class="blog-txt-info">
+                        <h4 class="mt-2"><a href="https://www.klook.com/vi/blog/tra-sua-dai-bac/">Rủ Rê “Crush” Đi Hết 10 Cửa Hàng Trà Sữa Nổi Tiếng Ở Đài Bắc</a></h4>
+                        <div class="news-date my-3">
+                            <ul>
+                                <li><span class="fa fa-calendar" aria-hidden="true"></span><a href="#about">12/4/2019</a></li>
+                                <li><span class="fa fa-comments" aria-hidden="true"></span><a href="#about">5 Comments</a></li>
+                            </ul>
+                        </div>
+                        <p>Bạn chưa phải là tín đồ ăn uống đích thực nếu chưa từng đặt chân đến các cửa hàng trà sữa nổi tiếng ở Đài Bắc trong danh sách này.  </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 blog-grid-flex mt-lg-5 mt-md-4 mt-3">
+                <div class="blog-txt-color">
+                    <img src="~/Content/Home/images/blg12.jpg" class="img-thumbnail" alt="">
+                    <div class="blog-txt-info">
+                        <h4 class="mt-2"><a href="https://www.sapo.vn/blog/cach-lam-tra-sua-tran-chau-ngon/">Cách làm trà sữa trân châu ngon sạch khách uống là “nghiền” </a></h4>
+                        <div class="news-date my-3">
+                            <ul>
+                                <li><span class="fa fa-calendar" aria-hidden="true"></span><a href="#about">24/04/2020</a></li>
+                                <li><span class="fa fa-comments" aria-hidden="true"></span><a href="#about">5 Comments</a></li>
+                            </ul>
+                        </div>
+                        <p>Trà sữa đã trở thành món đồ uống không thể thiếu với giới trẻ. Nếu chọn món trà sữa để bắt đầu khởi nghiệp thì quá là hợp lý. Bài viết sau đây sẽ hướng dẫn bạn cách làm trà sữa trân châu đường đen, trà sữa thái, trà sữa matcha...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //blog -->
+<!--team  -->
+<section class="team py-lg-4 py-md-3 py-sm-3 py-3" id="team">
+    <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
+        <h3 class="title text-center mb-2">THÀNH VIÊN CỦA CHÚNG TÔI</h3>
+        <div class="line-w3ls-title text-center mb-md-5 mb-sm-4 mb-3">
+            @*<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br>tempor incididunt ut labore et</p>*@
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 team-list-team">
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="~/Content/Home/images/t1.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="team-hover">
+                        <div class="desk text-center">
+                            <h4 class="mb-2">Đinh Minh Thiện</h4>
+                        </div>
+                        <div class="s-link">
+                            <ul>
+                                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                <li><a href="#"><span class="fa fa-rss"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-title">
+                    <h5>Đinh Minh Thiện</h5>
+                    <span>Quản Lý</span>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 team-list-team">
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="~/Content/Home/images/t2.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="team-hover">
+                        <div class="desk text-center">
+                            <h4 class="mb-2">Phạm Duy Lập</h4>
+                        </div>
+                        <div class="s-link">
+                            <ul>
+                                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                <li><a href="#"><span class="fa fa-rss"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-title">
+                    <h5>Phạm Duy Lập</h5>
+                    <span>Pha Chế</span>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 team-list-team">
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="~/Content/Home/images/t3.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="team-hover">
+                        <div class="desk text-center">
+                            <h4 class="mb-2">Nguyển Quốc Tiến</h4>
+                        </div>
+                        <div class="s-link">
+                            <ul>
+                                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                <li><a href="#"><span class="fa fa-rss"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-title">
+                    <h5>Nguyễn Quốc Tiến</h5>
+                    <span>Pha chế</span>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 team-list-team">
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="~/Content/Home/images/t4.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="team-hover">
+                        <div class="desk text-center">
+                            <h4 class="mb-2">Nguyễn Đức Chánh</h4>
+                        </div>
+                        <div class="s-link">
+                            <ul>
+                                <li><a href="https://www.facebook.com/profile.php?id=100004223955695"><span class="fa fa-facebook"></span></a></li>
+                                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                <li><a href="#"><span class="fa fa-rss"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-title">
+                    <h5>Nguyễn Đức Chánh</h5>
+                    <span>Bảo Vệ</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--//team -->
+<!--//clients -->
+<div class="address_mail_footer_grids" id="location">
+    <h3 class="title text-center mb-2">CỬA HÀNG</h3>
+    <h4 class="title text-center mb-2">Trụ Sở Chính và Trung Tâm Chăm Sóc Khách Hàng:</h4>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.493727271298!2d106.76952581462315!3d10.850002292271634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752763f23816ab%3A0x282f711441b6916f!2zxJDhuqFpIGjhu41jIFPGsCBQaOG6oW0gS-G7uSBUaHXhuq10IFRow6BuaCBQaOG7kSBI4buTIENow60!5e0!3m2!1svi!2s!4v1604304601068!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <h4 class="title text-center mb-2">Chi Nhánh Quận 1:</h4>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31355.769654301803!2d106.68085289261819!3d10.775176558621899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f38f9ed887b%3A0x14aded5703768989!2zUXXhuq1uIDEsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1604569177563!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <h4 class="title text-center mb-2">Chi Nhánh Quận 2:</h4>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125419.76149267843!2d106.67956802241805!3d10.78313602722742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175267f1c6f9ea1%3A0xbecd38cc31f49c06!2zUXXhuq1uIDIsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1604569229053!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <h4 class="title text-center mb-2">Chi Nhánh Quận 3:</h4>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31355.34558577192!2d106.66361444262088!3d10.779247508445103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed625169425%3A0x775d5068165e63b5!2zUXXhuq1uIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1604569272051!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+</div>
+<!-- footer -->
+
+<!--// footer -->

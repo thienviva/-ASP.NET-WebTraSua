@@ -1,0 +1,119 @@
+﻿<!-- Thêm thư viện -->
+@using WebQuanLyQuanTraSua.Models;
+@using System.Linq;
+@model PagedList.IPagedList<WebQuanLyQuanTraSua.Models.MENU>
+@using PagedList.Mvc;
+<!-- Kết thúc-->
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/AdminLayout.cshtml";
+}
+
+<h2>Danh Sách Các Món Trong MENU</h2>
+
+<p>
+    <div class="btn btn-default">
+        @Html.ActionLink("Thêm mới", "Create")
+    </div>
+    <div class="btn btn-default">
+        @Html.ActionLink("Thêm dữ liệu bằng File Excel", "ImportExport")
+    </div>
+
+</p>
+
+
+<!-- Tìm Kiếm -->
+@using (Html.BeginForm("Index", "MENUs", FormMethod.Get))
+{
+    <p>
+        <div class="btn btn-default">@Html.ActionLink("Mặc định", "Index")</div>
+        Tên Món: @Html.TextBox("SearchString", (string)ViewBag.searchValue) <input type="submit" value="Tìm kiếm" />
+        @Html.Hidden("page", (object)ViewBag.page)
+        @Html.Hidden("sortProperty", (object)ViewBag.sortProperty)
+        @Html.Hidden("sortOrder", (object)ViewBag.sortOrder)
+        @Html.Hidden("size", (object)ViewBag.pageSize)
+    </p>
+}
+<table class="table">
+    Sắp xếp theo: @Html.Raw(ViewBag.Headings)
+</table>
+<table class="table">
+    <!-- Sắp xếp -->
+    <!-- Danh sách bảng -->
+    <tr>
+        Danh sách các sản phẩm:
+        <th>
+            Tên món:
+        </th>
+        <th>
+            Giá:
+        </th>
+        <th>
+            Số lượng đã bán:
+        </th>
+        <th>
+            Hình ảnh:
+        </th>
+        <th>
+            Tên loại:
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenMon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuongDaBan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HinhAnh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LOAIMENU.TenLoai)
+            </td>
+            <td>
+                @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.MaMon }) |
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.MaMon }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.MaMon })
+            </td>
+        </tr>
+    }
+</table>
+
+<!-- Thêm mã phân trang -->
+<br />
+<div class="row">
+    <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+        @using (Html.BeginForm("Index", "MENUs", FormMethod.Get))
+        {
+            <p>
+                Kích thước trang: @Html.DropDownList("size", (List<SelectListItem>)ViewBag.size, new { @onchange = "this.form.submit();" })
+            </p>
+
+            @Html.Hidden("page", (object)ViewBag.page)
+            @Html.Hidden("sortProperty", (object)ViewBag.sortProperty)
+            @Html.Hidden("sortOrder", (object)ViewBag.sortOrder)
+            @Html.Hidden("searchString", (object)ViewBag.searchValue)
+        }
+    </div>
+    <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6 text-right">
+        Trang: @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+    </div>
+
+    <div style="padding-top:5em"></div>
+    <a class="btn btn-default" href="@Url.Action("ExportMENU")">Tải Danh Sách</a>
+
+</div>
+
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page, size = ViewBag.currentSize, sortProperty = ViewBag.sortProperty, sortOrder = ViewBag.SortOrder, searchString = ViewBag.searchValue }))
+<!-- Kết thúc -->
+

@@ -1,0 +1,67 @@
+﻿@model WebQuanLyQuanTraSua.Models.HOADON
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Layout/AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HOADON</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayXuatHD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayXuatHD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TongGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TongGia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TinhTrangHD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TinhTrangHD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CHINHANH.TenCN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHINHANH.TenCN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KHACHHANG.TenKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KHACHHANG.TenKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KHACHHANGLA.HoTen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KHACHHANGLA.HoTen)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaHD }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

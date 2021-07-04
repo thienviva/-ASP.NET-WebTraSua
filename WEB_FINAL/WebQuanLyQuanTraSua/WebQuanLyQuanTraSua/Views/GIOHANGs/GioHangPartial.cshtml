@@ -1,0 +1,17 @@
+﻿@*Dùng viewbag để thể hiện tổng số lượng sản phẩm có trong giỏ hàng và tổng tiền*@
+
+
+<div id="divGioHang" class="cart box_1">
+    <a href="@Url.Action("GIOHANGKH","GIOHANGs")">
+        <h3>
+            <div class="total">
+                <span class="simpleCart_total">@ViewBag.TongTien VNĐ</span> (<span>@ViewBag.TongSoluong</span> Sản phẩm)
+                                                                <span href="@Url.Action("GIOHANGKH","GIOHANGs")"><i class="fa fa-shopping-cart"></i>Giỏ hàng</span>
+            </div> 
+            
+            <img src="~/Content/GioHang/images/cart.png" alt="">
+        </h3>
+    </a>
+   
+
+</div>

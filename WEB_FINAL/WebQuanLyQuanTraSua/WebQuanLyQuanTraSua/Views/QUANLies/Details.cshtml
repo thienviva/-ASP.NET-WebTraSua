@@ -1,0 +1,79 @@
+﻿@model WebQuanLyQuanTraSua.Models.QUANLY
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Layout/AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>QUANLY</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenQL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenQL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tuoi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tuoi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Luong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Luong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TAIKHOANQL.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TAIKHOANQL.UserName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <div class="btn btn-default">
+        @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaQL })
+    </div>
+    <div class="btn btn-default">
+        @Html.ActionLink("Trở về danh sách", "Index")
+    </div>
+</p>

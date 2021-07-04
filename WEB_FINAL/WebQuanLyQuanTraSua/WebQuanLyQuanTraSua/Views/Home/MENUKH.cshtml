@@ -1,0 +1,210 @@
+﻿@using WebQuanLyQuanTraSua.Models;
+@model IEnumerable<MENU>
+
+@{
+    ViewBag.Title = "MENUKH";
+    Layout = "~/Views/Layout/HomeLayout.cshtml";
+}
+
+@{
+    //IEnumerable<MENU> lstTS1 = ViewBag.ListTS1 as IEnumerable<MENU>;
+    //IEnumerable<MENU> lstTS2 = ViewBag.ListTS2 as IEnumerable<MENU>;
+    IEnumerable<MENU> lstTS = ViewBag.ListTS as IEnumerable<MENU>;
+
+    IEnumerable<MENU> lstDX = ViewBag.ListDX as IEnumerable<MENU>;
+    IEnumerable<MENU> lstTP = ViewBag.ListTP as IEnumerable<MENU>;
+}
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Menu - Milk Tea DoubleTee</title>
+
+    <link href="//fonts.googleapis.com/css2?family=Manrope:wght@200;400;600&amp;display=swap" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="~/Content/Layout/bundles/css/style-starter.css">
+</head>
+
+<body>
+    <!--header-->
+    <!--/header-->
+
+    <div class="inner-banner">
+    </div>
+    <section class="w3l-breadcrumb">
+        <div class="container">
+            <ul class="breadcrumbs-custom-path">
+                <li><a href="https://localhost:44310/Home/Index">Trang Chủ</a></li>
+                <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span>Thực Đơn</li>
+            </ul>
+        </div>
+    </section>
+    <div class="w3l-menublock py-5">
+        <!-- menu block -->
+        <div id="w3l-menublock" class="text-center py-lg-4 py-md-3">
+            <div class="container">
+                <div class="title-content mb-5">
+                    <h3 class="title-big text-center mb-5">
+                        Thực đơn của chúng tôi
+                    </h3>
+                </div>
+
+                <input id="tab1" type="radio" name="tabs" checked="">
+                <label class="tabtle" for="tab1">Trà Sữa</label>
+
+                <input id="tab2" type="radio" name="tabs">
+                <label class="tabtle" for="tab2">Đá Xay</label>
+
+                <input id="tab3" type="radio" name="tabs">
+                <label class="tabtle" for="tab3">Topping</label>
+
+                <section id="content1" class="tab-content text-left">
+                    <div class="row menu-body">
+                        <div class="col-lg-6 col-lg-offset-3 menu-section pr-lg-5">
+                            @Html.Partial("~/Views/MENUs/MENUStyle2Partial.cshtml", lstTS)
+                        </div>
+
+                    </div>
+                </section>
+
+                <section id="content2" class="tab-content text-left">
+                    <div class="row menu-body">
+                        <div class="col-lg-6 col-lg-offset-3 menu-section pr-lg-5">
+                            @Html.Partial("~/Views/MENUs/MENUStyle2Partial.cshtml", lstDX)
+                        </div>
+                    </div>
+                </section>
+
+                <section id="content3" class="tab-content text-left">
+                    <div class="row menu-body">
+                        <div class="col-lg-6 col-lg-offset-3 menu-section pr-lg-5">
+                            @Html.Partial("~/Views/MENUs/MENUStyle2Partial.cshtml", lstTP)
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+        <!-- menu block -->
+    </div>
+
+
+    <!-- Template JavaScript -->
+    <script src="~/Content/Layout/bundles/js/jquery-3.3.1.min.js"></script>
+
+    <!-- script for testimonials -->
+    <script>
+        $(document).ready(function () {
+            $('.owl-testimonial').owlCarousel({
+                loop: true,
+                margin: 0,
+                nav: true,
+                responsiveClass: true,
+                autoplay: false,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 1000,
+                autoplayHoverPause: false,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false
+                    },
+                    480: {
+                        items: 1,
+                        nav: false
+                    },
+                    667: {
+                        items: 1,
+                        nav: true
+                    },
+                    1000: {
+                        items: 1,
+                        nav: true
+                    }
+                }
+            })
+        })
+    </script>
+    <!-- //script for testimonials -->
+
+    <script src="~/Content/Layout/bundles/js/theme-change.js"></script>
+    <script src="~/Content/Layout/bundles/js/owl.carousel.js"></script>
+    <!-- script for banner slider-->
+    <script>
+        $(document).ready(function () {
+            $('.owl-one').owlCarousel({
+                loop: true,
+                margin: 0,
+                nav: false,
+                responsiveClass: true,
+                autoplay: false,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 1000,
+                autoplayHoverPause: false,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false
+                    },
+                    480: {
+                        items: 1,
+                        nav: false
+                    },
+                    667: {
+                        items: 1,
+                        nav: true
+                    },
+                    1000: {
+                        items: 1,
+                        nav: true
+                    }
+                }
+            })
+        })
+    </script>
+    <!-- //script -->
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
+    <!-- disable body scroll which navbar is in active -->
+    <!--/MENU-JS-->
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+    <!--//MENU-JS-->
+
+    <script src="~/Content/Layout/bundles/js/bootstrap.min.js"></script>
+
+
+</body>

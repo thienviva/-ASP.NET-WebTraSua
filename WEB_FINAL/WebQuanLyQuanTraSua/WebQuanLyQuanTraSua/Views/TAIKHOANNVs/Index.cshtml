@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebQuanLyQuanTraSua.Models.TAIKHOANNV>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/AdminLayout.cshtml";
+}
+
+<h2>Thiết Lập Tài Khoản Cho Nhân Viên</h2>
+
+<p>
+    <div class="btn btn-default">
+        @Html.ActionLink("Thêm mới", "Create")
+    </div>
+    <div class="btn btn-default">
+        @Html.ActionLink("Danh sách nhân viên", "Index", "NHANVIENs")
+    </div>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Tài khoản:
+        </th>
+        <th>
+            Mật khẩu:
+        </th>
+        <th>
+            Họ và tên:
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NHANVIEN.TenNV)
+        </td>
+        <td>
+            @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.MaNV }) |
+            @Html.ActionLink("Chi tiết", "Details", new { id = item.MaNV }) |
+            @Html.ActionLink("Xóa", "Delete", new { id = item.MaNV })
+        </td>
+    </tr>
+}
+
+</table>

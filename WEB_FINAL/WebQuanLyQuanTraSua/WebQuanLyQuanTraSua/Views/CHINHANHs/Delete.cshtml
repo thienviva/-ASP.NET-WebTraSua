@@ -1,0 +1,59 @@
+﻿@model WebQuanLyQuanTraSua.Models.CHINHANH
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Layout/AdminLayout.cshtml";
+}
+
+<h2>Xóa</h2>
+
+<h3>Bạn có chắc rằng sẽ xóa mục này?</h3>
+<div>
+    <h4>CHINHANH</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenCN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenCN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QUANLY.TenQL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QUANLY.TenQL)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Delete" class="btn btn-default" />
+    <div class="btn btn-default">
+        @Html.ActionLink("Trở về danh sách", "Index")
+    </div>
+    </div>
+    }
+</div>

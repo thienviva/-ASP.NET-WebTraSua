@@ -1,0 +1,228 @@
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\WebQuanLyQuanTraSua.dll.config
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\WebQuanLyQuanTraSua.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\WebQuanLyQuanTraSua.pdb
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\csc.exe
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\csc.exe.config
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\csc.rsp
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\csi.exe
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\csi.exe.config
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\csi.rsp
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.AppContext.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Collections.Immutable.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Console.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Globalization.Calendars.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.IO.Compression.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.IO.FileSystem.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Net.Http.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Net.Sockets.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Reflection.Metadata.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.ValueTuple.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Xml.XPath.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\vbc.exe
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\vbc.exe.config
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\vbc.rsp
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\VBCSCompiler.exe
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\VBCSCompiler.exe.config
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Antlr3.Runtime.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Microsoft.Web.Infrastructure.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Newtonsoft.Json.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Helpers.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Mvc.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Optimization.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Razor.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.WebPages.Deployment.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.WebPages.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.WebPages.Razor.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\WebGrease.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Helpers.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Mvc.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Optimization.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Razor.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.WebPages.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.WebPages.Deployment.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.WebPages.Razor.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Newtonsoft.Json.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Antlr3.Runtime.pdb
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\obj\Debug\WebQuanLyQuanTraSua.csprojAssemblyReference.cache
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\obj\Debug\WebQuanLyQuanTraSua.csproj.CoreCompileInputs.cache
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\obj\Debug\WebQuanLyQuanTraSua.csproj.CopyComplete
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\obj\Debug\WebQuanLyQuanTraSua.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\obj\Debug\WebQuanLyQuanTraSua.pdb
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\EntityFramework.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\EntityFramework.SqlServer.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\EntityFramework.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\EntityFramework.SqlServer.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\PagedList.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\PagedList.Mvc.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\PagedList.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\PagedList.Mvc.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Linq.Dynamic.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Net.Http.Formatting.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Http.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Http.WebHost.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Net.Http.Formatting.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Http.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Http.WebHost.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\BouncyCastle.Crypto.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\MailKit.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\MimeKit.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Buffers.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\BouncyCastle.Crypto.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\MailKit.pdb
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\MailKit.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\MimeKit.pdb
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\MimeKit.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Buffers.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\WebQuanLyQuanTraSua.dll.config
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\WebQuanLyQuanTraSua.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\WebQuanLyQuanTraSua.pdb
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\csc.exe
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\csc.exe.config
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\csc.rsp
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\csi.exe
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\csi.exe.config
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\csi.rsp
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.AppContext.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Collections.Immutable.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Console.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Globalization.Calendars.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.IO.Compression.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.IO.FileSystem.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Net.Http.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Net.Sockets.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Reflection.Metadata.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.ValueTuple.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Xml.XPath.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\vbc.exe
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\vbc.exe.config
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\vbc.rsp
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\VBCSCompiler.exe
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\roslyn\VBCSCompiler.exe.config
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Antlr3.Runtime.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\BouncyCastle.Crypto.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\EntityFramework.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\EntityFramework.SqlServer.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\MailKit.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Microsoft.Web.Infrastructure.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\MimeKit.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Newtonsoft.Json.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\PagedList.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\PagedList.Mvc.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Buffers.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Linq.Dynamic.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Net.Http.Formatting.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Helpers.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Http.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Http.WebHost.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Mvc.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Optimization.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Razor.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.WebPages.Deployment.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.WebPages.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.WebPages.Razor.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\WebGrease.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\BouncyCastle.Crypto.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\EntityFramework.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\EntityFramework.SqlServer.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\MailKit.pdb
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\MailKit.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\MimeKit.pdb
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\MimeKit.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\PagedList.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\PagedList.Mvc.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Buffers.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Net.Http.Formatting.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Http.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Http.WebHost.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Helpers.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Mvc.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Optimization.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.Razor.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.WebPages.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.WebPages.Deployment.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.Web.WebPages.Razor.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Newtonsoft.Json.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Antlr3.Runtime.pdb
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\obj\Debug\WebQuanLyQuanTraSua.csprojAssemblyReference.cache
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\obj\Debug\WebQuanLyQuanTraSua.csproj.CoreCompileInputs.cache
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\obj\Debug\WebQuanLyQuanTraSua.csproj.CopyComplete
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\obj\Debug\WebQuanLyQuanTraSua.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\obj\Debug\WebQuanLyQuanTraSua.pdb
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\LinqToExcel.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Remotion.Data.Linq.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Remotion.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Remotion.Interfaces.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\LinqToExcel.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\EPPlus.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Microsoft.IO.RecyclableMemoryStream.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.ComponentModel.Annotations.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\EPPlus.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\New folder\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Microsoft.IO.RecyclableMemoryStream.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\EPPlus.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\LinqToExcel.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Microsoft.IO.RecyclableMemoryStream.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Remotion.Data.Linq.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Remotion.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Remotion.Interfaces.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\System.ComponentModel.Annotations.dll
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\EPPlus.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\LinqToExcel.xml
+E:\Documents\IT - Year 3 - 4\Web\DTCK\WebQuanLyQuanTraSua\WebQuanLyQuanTraSua\bin\Microsoft.IO.RecyclableMemoryStream.xml

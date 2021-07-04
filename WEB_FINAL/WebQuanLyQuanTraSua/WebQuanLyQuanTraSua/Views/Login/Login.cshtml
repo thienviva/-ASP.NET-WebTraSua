@@ -1,0 +1,364 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Layout/HomeLayout.cshtml";
+}
+
+<html class="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Đăng Nhập - Milk Tea DoubleTee</title>
+
+    <link href="//fonts.googleapis.com/css2?family=Manrope:wght@200;400;600&amp;display=swap" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="~/Content/Layout/bundles/css/style-starter.css">
+
+    <!-- ############################ Quên mật khẩu ############################## -->
+    <div class="modal fade" id="ForgotPass">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Quên mật khẩu</h4>
+                </div>
+                <form method="post" action="/Login/ForgotPass" id="Forgotpass">
+                    <div class="modal-body">
+                        <div id="err_forgotpass"></div>
+                        <div id="login_here">
+                            <label>Số điện thoại : </label>
+                            <input type="text" class="form-control" name="SDT" id="SDT" />
+                            <label>Email : </label>
+                            <input type="email" class="form-control" name="Email" id="Email" />
+                            <br />
+                        </div>
+                        <br />
+                        <div id="waiting" style="display: none;">
+                            <div class="progress progress-striped active">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" id="Send">Gửi</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Thoát</button>
+                    </div>
+                </form>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- ===================================Ajax Login=========================-->
+    <script>
+        $(document).ready(function () {
+            $("#Forgotpass").submit(function (e) {
+                if ($("#SDT").val() == '') {
+                    $('#err_forgotpass').html('<div class="alert alert-danger">Chưa nhập Số Điện Thoại!</div>');
+                    $("#SDT").focus();
+                    return false;
+                }
+                else if ($("#Email").val() == '') {
+                    $('#err_forgotpass').html('<div class="alert alert-danger">Chưa nhập Email!</div>');
+                    $("#Email").focus();
+                    return false;
+                }
+                else {
+                    var form_data_forgotpass = {
+                        SDT: $("#SDT").val(),
+                        Email: $("#Email").val()
+                    };
+                    $.ajax({
+                        url: '/Login/ForgotPass',
+                        type: 'POST',
+                        async: true,
+                        data: form_data_forgotpass,
+                        success: function (KiemTra) {
+                            //alert(msg);
+                            if (KiemTra == 'false') {
+                                $('#err_forgotpass').html('<div class="alert alert-danger">Số Điện Thoại hoặc Email chưa được đăng ký!</div>');
+                                $("#Email").val("");
+                                $("#Email").focus();
+                                return false;
+                            }
+
+
+                            else {
+                                $.ajax({
+                                    url: '/Login/VerifyEmail',
+                                    type: 'POST',
+                                    async: true,
+                                    data: form_data_forgotpass,
+                                    success: function (gui) {
+                                        if (gui == "true")
+                                            $('#err_forgotpass').html('<div class="alert alert-success"><strong>Đã gửi về Email thành công!</strong><span> --> Vui lòng kiểm tra mail để lấy mật khẩu mới (^_^)</span></div>');
+                                    }
+                                });
+
+
+                            }
+                        }
+                    });
+                    return false;
+                }
+            });
+        })
+        //Load wating bar
+        $(document).ajaxStart(function () {
+            $("#waiting").show();
+        }).ajaxStop(function () {
+            $("#waiting").hide();
+        });
+    </script>
+
+
+</head>
+
+<body>
+    <!--header-->
+    <!--/header-->
+
+    <div class="inner-banner">
+    </div>
+    <section class="w3l-breadcrumb">
+        <div class="container">
+            <ul class="breadcrumbs-custom-path">
+                <li><a href="https://localhost:44310/Home/Index">Trang Chủ</a></li>
+                <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span>Đăng Nhập</li>
+            </ul>
+        </div>
+    </section>
+    <!-- /contact-form -->
+    <section class="w3l-contact-6 py-5" id="contact">
+        <div class="contact-info  py-lg-4 py-md-3">
+            <div class="container">
+                <div class="title-content mb-5">
+                    <h5 class="title-small text-center mb-2">Đăng Nhập</h5>
+                </div>
+
+                <div class="grid contact-grids pt-3">
+                    <div class="contact-left">
+                        <div class="grid">
+                            <span class="fa fa-map-marker"></span>
+                            <div class="location-info">
+                                <span>Trụ sở chính:</span>
+                                <p> Số 1 Võ Văn Ngân, Linh Chiểu, Thủ Đức </p>
+                                <p>Trường Đại học Sư phạm Kỹ thuật</p>
+                                <p>Thành phố Hồ Chí Minh, Việt Nam.</p>
+                            </div>
+                        </div>
+                        <div class="grid">
+                            <span class="fa fa-envelope-o"></span>
+                            <div class="email-info">
+                                <span>Giải đáp thắc mắc:</span>
+                                <a href="mailto:18110203@student.hcmute.edu.vn">18110203@student.hcmute.edu.vn</a>
+                                <a href="mailto:18110205@student.hcmute.edu.vn">18110205@student.hcmute.edu.vn</a>
+                            </div>
+                        </div>
+                        <div class="grid">
+                            <span class="fa fa-phone"></span>
+                            <div class="email-info">
+                                <span>Số điện thoại tư vấn:</span>
+                                <a href="tel: 0968892926"> (+84) 968892926</a><br>
+                                <a href="tel: 0971507603"> (+84) 971507603</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contacts12-main">
+                        
+                        <form method="post" class="signin-form" id="signin-form">
+
+
+                            <div class="input-grids">
+                                <div>
+                                    <label class="form-field" for="w3lName">Tài khoản:</label>
+                                    <input type="text" name="taikhoan" id="taikhoan" placeholder="Tài khoản" class="contact-input">
+                                    <p style="color:red;" id="TB_taikhoan"></p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="form-field" for="w3lSubect">Mật khẩu:</label>
+                                <input type="password" name="pass" id="pass" placeholder="Mật khẩu" class="contact-input">
+                                <p style="color:red;" id="TB_pass"></p>
+                            </div>
+
+                            <div class="forgot">
+                                <h2> <a href="#ForgotPass" class="signup-image-link" data-toggle="modal">Bạn quên mật khẩu?</a></h2>
+                            </div>
+
+                            <div class="signin-image">
+                                <h2><a href="https://localhost:44310/Registration/Registration" class="signup-image-link">Tạo tài khoản</a></h2>
+                            </div>
+
+                            <div class="text-right">
+                                <button class="btn btn-style btn-primary submit" id="btnDangNhap">Đăng nhập</button>
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //contact-form -->
+    <!-- /contact-map -->
+    <!-- //contact-map -->
+    <!-- Template JavaScript -->
+    <script src="~/Content/Layout/bundles/js/jquery-3.3.1.min.js"></script>
+
+    <!-- script for testimonials -->
+    <script>
+        $(document).ready(function () {
+            $('.owl-testimonial').owlCarousel({
+                loop: true,
+                margin: 0,
+                nav: true,
+                responsiveClass: true,
+                autoplay: false,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 1000,
+                autoplayHoverPause: false,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false
+                    },
+                    480: {
+                        items: 1,
+                        nav: false
+                    },
+                    667: {
+                        items: 1,
+                        nav: true
+                    },
+                    1000: {
+                        items: 1,
+                        nav: true
+                    }
+                }
+            })
+        })
+    </script>
+    <!-- //script for testimonials -->
+
+    <script src="~/Content/Layout/bundles/js/theme-change.js"></script>
+
+    <script src="~/Content/Layout/bundles/js/owl.carousel.js"></script>
+    <!-- script for banner slider-->
+    <script>
+        $(document).ready(function () {
+            $('.owl-one').owlCarousel({
+                loop: true,
+                margin: 0,
+                nav: false,
+                responsiveClass: true,
+                autoplay: false,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 1000,
+                autoplayHoverPause: false,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false
+                    },
+                    480: {
+                        items: 1,
+                        nav: false
+                    },
+                    667: {
+                        items: 1,
+                        nav: true
+                    },
+                    1000: {
+                        items: 1,
+                        nav: true
+                    }
+                }
+            })
+        })
+    </script>
+    <!-- //script -->
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
+    <!-- disable body scroll which navbar is in active -->
+    <!--/MENU-JS-->
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+    <!--//MENU-JS-->
+
+    <script src="~/Content/Layout/bundles/js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+
+</html>
+
+
+@*Kiểm tra validation thông qua jquery*@
+<script>
+    $("#btnDangNhap").click(function () {
+        var error = 0;
+
+        if ($("#taikhoan").val() == "") {
+            $("#TB_taikhoan").text("Chưa nhập tài khoản!");
+            error++;
+        }
+        else {
+            $("#TB_taikhoan").text("");
+        }
+
+
+        if ($("#pass").val() == "") {
+            $("#TB_pass").text("Chưa nhập mật khẩu!");
+            error++;
+        }
+
+        else {
+            $("#TB_pass").text("");
+        }
+
+
+        if (error != 0) {
+            //Ngăn submit dữ liệu lên sql
+            return false;
+        }
+
+    });
+
+</script>

@@ -1,0 +1,31 @@
+﻿@using WebQuanLyQuanTraSua.Models;
+@model IEnumerable<MENU>
+
+<div class="container-fluid pt-lg-5 pt-md-5 pt-sm-4 pt-3">
+    @*<h3 class="title text-center mb-2">@Model.First().LOAIMENU.TenLoai</h3>*@
+    <div class="row gallery-info">
+        @foreach (var item in Model.Take(4))
+        {
+            <!-- Trà Sữa -->
+            <div class="col-lg-3 col-md-3 col-sm-6 gallery-img-grid p-0">
+                <div class="gallery-grids">
+                    <a href="#@item.MaMon"><img src="@Url.Content("~/Content/HinhAnhMENU/" + item.HinhAnh)" alt="news image" class="img-fluid"></a>
+                    <div class="title text-center mb-2">
+                        <h1>@item.TenMon</h1>
+                        <h1>@item.Gia VNĐ</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- popup-->
+            <div id="@item.MaMon" class="popup-effect">
+                <div class="popup">
+                    <img src="@Url.Content("~/Content/HinhAnhMENU/" + item.HinhAnh)" alt="Popup Image" class="img-fluid">
+                    <a class="close" href="#@item.LOAIMENU">X</a>
+                    <h1>@item.TenMon</h1>
+                    <h1>@item.Gia VNĐ</h1>
+                </div>
+            </div>
+
+        }
+    </div>
+    </div>

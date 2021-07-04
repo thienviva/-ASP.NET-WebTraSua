@@ -1,0 +1,322 @@
+﻿@using WebQuanLyQuanTraSua.Models;
+
+
+@{
+    ViewBag.Title = "ThongKe";
+    Layout = "~/Views/Layout/HomeLayout.cshtml";
+
+}
+
+
+
+@{
+
+    int slbTS = ViewBag.SLBTS;
+    int slbDX = ViewBag.SLBDX;
+    int slbTP = ViewBag.SLBTP;
+
+}
+
+<script src="~/Scripts/chart/accessibility.js"></script>
+<script src="~/Scripts/chart/export-data.js"></script>
+<script src="~/Scripts/chart/exporting.js"></script>
+<script src="~/Scripts/chart/highcharts.js"></script>
+
+
+
+
+<div class="jumbotron">
+    <figure class="highcharts-figure">
+        <div id="container1"></div>
+        <p class="highcharts-description">
+
+        </p>
+    </figure>
+
+
+    <div id="container">
+        <canvas id="bar_chart"></canvas>
+    </div>
+
+    <figure class="highcharts-figure">
+        <div id="container2"></div>
+        <p class="highcharts-description">
+
+        </p>
+    </figure>
+
+
+    <figure class="highcharts-figure">
+        <div id="container3"></div>
+        <p class="highcharts-description">
+
+        </p>
+    </figure>
+
+    <figure class="highcharts-figure">
+        <div id="container4"></div>
+        <p class="highcharts-description">
+
+        </p>
+    </figure>
+
+
+
+</div>
+
+<script>
+
+    Highcharts.chart('container1', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Loại Món Bán Nhiều Nhất Năm 2020 (%)'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        accessibility: {
+            point: {
+                valueSuffix: '%'
+            }
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                }
+            }
+        },
+        series: [{
+            name: 'Chiếm',
+            colorByPoint: true,
+            data: [{
+                name: 'Trà Sữa',
+                y: @slbTS,
+
+            }, {
+                name: 'Đá Xay',
+                y: @slbDX
+            }, {
+                name: 'Topping',
+                y: @slbTP
+            }]
+        }]
+    });
+
+</script>
+
+
+<script>
+
+
+
+        var CN1 = @Html.Raw(Json.Encode(ViewBag.cn1));
+        var CN2 = @Html.Raw(Json.Encode(ViewBag.cn2));
+        var CN3 = @Html.Raw(Json.Encode(ViewBag.cn3));
+
+    $(document).ready(function () {
+        $.getJSON("/ChartJs/GetData3", function (data) {
+
+
+            var ctx = $("#bar_chart");
+            var bacChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ["Số Lượng Đơn Hàng Của Từng Chi Nhánh"],
+                    datasets: [{
+                        label: data[0].name,
+                        data: CN1,
+                        backgroundColor: ["rgba(242,166,54,.5)", "rgba(145,65,72,.5)", "rgba(74,25,92,.5)"],
+                        borderColor: ["rgb(242, 166, 54)", "rgb(145, 65, 72)", "rgb(74,25,92)"],
+                        borderWidth: 1
+                    }
+
+                        , {
+                        label: data[1].name,
+                        data: CN2,
+                        backgroundColor: ["rgba(54, 162, 235, 0.2)", "rgba(255, 20, 132, 0.2)", "rgba(10, 162, 235, 0.2)"],
+                        borderColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
+                        borderWidth: 1
+                    }
+                        , {
+                        label: data[2].name,
+                        data: CN3,
+                        backgroundColor: ["rgba(255, 99, 132, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(255, 20, 132, 0.2)", "rgba(10, 162, 235, 0.2)"],
+                        borderColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
+                        borderWidth: 1
+                    }
+                    ],
+
+
+
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: 'Thống Kê Số Lượng Đơn Hàng Của Từng Chi Nhánh'
+                    },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true,
+                                stepSize: 1
+                            }
+                        }]
+                    }
+                }
+
+
+            });
+        })
+    })
+
+
+</script>
+
+
+<script>
+    $(document).ready(function () {
+        $.getJSON("/ChartJs/GetData", function (data) {
+            var Names = []
+            var Tongtien = []
+            for (var i = 0; i < data.length; i++) {
+                Names.push(data[i].name);
+                Tongtien.push(data[i].count);
+            }
+
+            Highcharts.chart('container3', {
+                chart: {
+                    type: 'line'
+                },
+                title: {
+                    text: 'Doanh Thu Của Cửa Hàng'
+                },
+                subtitle: {
+                    text: '(Theo Ngày)'
+                },
+                xAxis: {
+                    categories: Names
+                },
+                yAxis: {
+                    title: {
+                        text: '(VNĐ)'
+                    }
+                },
+                plotOptions: {
+                    line: {
+                        dataLabels: {
+                            enabled: true
+                        },
+                        enableMouseTracking: false
+                    }
+                },
+                series: [{
+                    name: 'Tổng tiền của hóa đơn',
+                    data: Tongtien
+                }]
+            });
+        })
+    })
+
+
+
+</script>
+
+<script>
+
+    $(document).ready(function () {
+        $.getJSON("/ChartJs/GetData2", function (data) {
+            var Names = []
+            var SoLuongBan = []
+            var Gia = []
+            for (var i = 0; i < data.length; i++) {
+                Names.push(data[i].name);
+                SoLuongBan.push(data[i].count);
+                Gia.push(data[i].gia);
+            }
+            Highcharts.chart('container4', {
+                chart: {
+                    zoomType: 'xy'
+                },
+                title: {
+                    text: 'Số Lượng Bán Và Giá Của Từng Món Trong MENU'
+                },
+                subtitle: {
+                    text: ''
+                },
+                xAxis: [{
+                    categories: Names,
+                    crosshair: true
+                }],
+                yAxis: [{ // Primary yAxis
+                    labels: {
+                        format: '{value} VNĐ',
+                        style: {
+                            color: Highcharts.getOptions().colors[1]
+                        }
+                    },
+                    title: {
+                        text: 'Giá Món',
+                        style: {
+                            color: Highcharts.getOptions().colors[1]
+                        }
+                    }
+                }, { // Secondary yAxis
+                    title: {
+                        text: 'Số Lượng Đã Bán',
+                        style: {
+                            color: Highcharts.getOptions().colors[0]
+                        }
+                    },
+                    labels: {
+                        format: '{value} Món',
+                        style: {
+                            color: Highcharts.getOptions().colors[0]
+                        }
+                    },
+                    opposite: true
+                }],
+                tooltip: {
+                    shared: true
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'left',
+                    x: 120,
+                    verticalAlign: 'top',
+                    y: 100,
+                    floating: true,
+                    backgroundColor:
+                        Highcharts.defaultOptions.legend.backgroundColor || // theme
+                        'rgba(255,255,255,0.25)'
+                },
+                series: [{
+                    name: 'Số lượng Đã Bán',
+                    type: 'column',
+                    yAxis: 1,
+                    data: SoLuongBan,
+                    tooltip: {
+                        valueSuffix: ' Món'
+                    }
+
+                }, {
+                    name: 'Giá Món',
+                    type: 'spline',
+                    data: Gia,
+                    tooltip: {
+                        valueSuffix: ' VNĐ'
+                    }
+                }]
+            });
+        })
+    })
+
+</script>

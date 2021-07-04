@@ -1,0 +1,47 @@
+﻿@model WebQuanLyQuanTraSua.Models.TAIKHOANQL
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Layout/AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TAIKHOANQL</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QUANLY.TenQL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QUANLY.TenQL)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <div class="btn btn-default">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.MaQL })
+    </div>
+    <div class="btn btn-default">
+        @Html.ActionLink("Trờ về danh sách", "Index")
+    </div>
+</p>

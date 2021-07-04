@@ -1,0 +1,145 @@
+﻿@model PagedList.IPagedList<WebQuanLyQuanTraSua.Models.NHANVIEN>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/AdminLayout.cshtml";
+}
+
+<h2>Danh Sách Nhân Viên</h2>
+
+
+<p>
+    <div class="btn btn-default">
+        @Html.ActionLink("Thêm mới", "Create")
+    </div>
+    <div class="btn btn-default">
+        @Html.ActionLink("Tài khoản nhân viên", "Index", "TAIKHOANNVs")
+    </div>
+</p>
+
+<!-- Tìm Kiếm -->
+@using (Html.BeginForm("Index", "KHACHHANGs", FormMethod.Get))
+{
+    <p>
+        <div class="btn btn-default">@Html.ActionLink("Mặc định", "Index")</div>
+        Tên khách hàng: @Html.TextBox("SearchString", (string)ViewBag.searchValue) <input type="submit" value="Tìm kiếm" />
+        @Html.Hidden("page", (object)ViewBag.page)
+        @Html.Hidden("sortProperty", (object)ViewBag.sortProperty)
+        @Html.Hidden("sortOrder", (object)ViewBag.sortOrder)
+        @Html.Hidden("size", (object)ViewBag.pageSize)
+    </p>
+}
+
+<table class="table">
+    Sắp xếp theo: @Html.Raw(ViewBag.Headings)
+</table>
+<table class="table">
+    <!-- Sắp xếp -->
+    <!-- Danh sách bảng -->
+    <tr>
+        Danh sách nhân viên:
+        <th>
+            Mã nhân viên:
+        </th>
+        <th>
+            Họ và tên:
+        </th>
+        <th>
+            Email:
+        </th>
+        <th>
+            Tuổi:
+        </th>
+        <th>
+            Chức vụ:
+        </th>
+        <th>
+            Số điện thoại:
+        </th>
+        <th>
+            Địa chỉ:
+        </th>
+        <th>
+            Lương:
+        </th>
+        <th>
+            Tên chi nhánh:
+        </th>
+        <th>
+            Tài khoản nhân viên:
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaNV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenNV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tuoi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChucVu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SDT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiaChi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Luong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CHINHANH.TenCN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TAIKHOANNV.UserName)
+            </td>
+            <td>
+                @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.MaNV }) |
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.MaNV }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.MaNV })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<!-- Thêm mã phân trang -->
+<br />
+<div class="row">
+    <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+        @using (Html.BeginForm("Index", "NHANVIENs", FormMethod.Get))
+        {
+            <p>
+                Kích thước trang: @Html.DropDownList("size", (List<SelectListItem>)ViewBag.size, new { @onchange = "this.form.submit();" })
+            </p>
+
+            @Html.Hidden("page", (object)ViewBag.page)
+            @Html.Hidden("sortProperty", (object)ViewBag.sortProperty)
+            @Html.Hidden("sortOrder", (object)ViewBag.sortOrder)
+            @Html.Hidden("searchString", (object)ViewBag.searchValue)
+        }
+    </div>
+    <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6 text-right">
+        Trang: @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+    </div>
+
+    <div style="padding-top:5em"></div>
+    
+    <a class="btn btn-default" href="@Url.Action("XuatNV")">Tải Danh Sách</a>
+
+</div>
+
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page, size = ViewBag.currentSize, sortProperty = ViewBag.sortProperty, sortOrder = ViewBag.SortOrder, searchString = ViewBag.searchValue }))
+<!-- Kết thúc -->

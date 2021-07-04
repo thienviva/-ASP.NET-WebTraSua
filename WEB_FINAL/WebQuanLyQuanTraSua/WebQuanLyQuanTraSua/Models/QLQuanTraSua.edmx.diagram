@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="52663a924ec94bb1b75e6069c08d8e08" Name="Diagram1" ZoomLevel="85">
+        <EntityTypeShape EntityType="QLQuanTraSuaModel.CHINHANH" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLQuanTraSuaModel.CHITIETHD" Width="1.5" PointX="9.625" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLQuanTraSuaModel.GIAOHANG" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLQuanTraSuaModel.GIOHANG" Width="1.5" PointX="8.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLQuanTraSuaModel.HOADON" Width="1.5" PointX="6" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLQuanTraSuaModel.KHACHHANG" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLQuanTraSuaModel.KHACHHANGLA" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLQuanTraSuaModel.KHUYENMAI" Width="1.5" PointX="6" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLQuanTraSuaModel.LOAIMENU" Width="1.5" PointX="3.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLQuanTraSuaModel.MENU" Width="1.5" PointX="6" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLQuanTraSuaModel.NHANVIEN" Width="1.5" PointX="6" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLQuanTraSuaModel.PHANCA" Width="1.5" PointX="8.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLQuanTraSuaModel.QUANLY" Width="1.5" PointX="1.5" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLQuanTraSuaModel.TAIKHOANKH" Width="1.5" PointX="3" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLQuanTraSuaModel.TAIKHOANNV" Width="1.5" PointX="8.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLQuanTraSuaModel.TAIKHOANQL" Width="1.5" PointX="3.75" PointY="15.5" IsExpanded="true" />
+        <AssociationConnector Association="QLQuanTraSuaModel.FK__CHINHANH__MaQL__1273C1CD" ManuallyRouted="false" />
+        <AssociationConnector Association="QLQuanTraSuaModel.FK__HOADON__MaCN__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="QLQuanTraSuaModel.FK__NHANVIEN__MaCN__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLQuanTraSuaModel.FK__PHANCA__MaCN__1ED998B2" ManuallyRouted="false" />
+        <AssociationConnector Association="QLQuanTraSuaModel.FK__CHITIETHD__MaHD__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="QLQuanTraSuaModel.FK__CHITIETHD__MaMon__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="QLQuanTraSuaModel.FK__GIAOHANG__MaHD__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="QLQuanTraSuaModel.FK__GIAOHANG__MaKH__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="QLQuanTraSuaModel.FK__GIOHANG__MaGH__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="QLQuanTraSuaModel.FK__GIOHANG__MaHD__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="QLQuanTraSuaModel.FK__GIOHANG__MaKH__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="QLQuanTraSuaModel.FK__GIOHANG__MaKM__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="QLQuanTraSuaModel.FK__GIOHANG__MaMon__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="QLQuanTraSuaModel.FK__HOADON__MaKH__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="QLQuanTraSuaModel.FK__TAIKHOANKH__MaKH__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="QLQuanTraSuaModel.FK__MENU__MaLoai__173876EA" ManuallyRouted="false" />
+        <AssociationConnector Association="QLQuanTraSuaModel.FK__PHANCA__MaNV__1DE57479" ManuallyRouted="false" />
+        <AssociationConnector Association="QLQuanTraSuaModel.FK__TAIKHOANNV__MaNV__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="QLQuanTraSuaModel.FK__TAIKHOANQL__MaQL__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="QLQuanTraSuaModel.FK__GIAOHANG__MaKHLA__47DBAE45" />
+        <AssociationConnector Association="QLQuanTraSuaModel.FK__HOADON__MaKHLA__4F7CD00D" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

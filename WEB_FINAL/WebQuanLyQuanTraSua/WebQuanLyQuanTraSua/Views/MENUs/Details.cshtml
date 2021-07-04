@@ -1,0 +1,63 @@
+﻿@model WebQuanLyQuanTraSua.Models.MENU
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Layout/AdminLayout.cshtml";
+}
+
+<h2>Chi Tiết</h2>
+
+<div>
+    <h4>MENU</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên món:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenMon)
+        </dd>
+
+        <dt>
+            Giá:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gia)
+        </dd>
+
+        <dt>
+            Số lượng đã bán:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongDaBan)
+        </dd>
+
+        <dt>
+            Hình ảnh:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HinhAnh)
+        </dd>
+
+        <dt>
+            Tên Loại:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOAIMENU.TenLoai)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <div class="btn btn-default">
+        @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaMon })
+    </div>
+    <div class="btn btn-default">
+        @Html.ActionLink("Trở về danh sách", "Index")
+    </div>
+</p>
